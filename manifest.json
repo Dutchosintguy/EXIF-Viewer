@@ -1,0 +1,27 @@
+{
+   "manifest_version":  2,
+   "background": 
+	{
+		"persistent": true,
+		"page": "service.html"
+	},
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [ "exifviewerui.css" ],
+      "js": [ "jquery-1.4.2.min.js", "exifviewerutil.js", "exifviewerconfig.js", "exifviewerui.js", "exifviewer.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "Quick viewing EXIF",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "name": "EXIF Viewer",
+   "options_page": "options.html",
+   "permissions": [ "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.4.4"
+}

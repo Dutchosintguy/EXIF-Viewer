@@ -1,0 +1,43 @@
+{
+   "ClickToCheckMap": {
+      "message": "\u9EDE\u64CA\u67E5\u770B\u5730\u5716"
+   },
+   "ClickToCheckMapInGoogleMaps": {
+      "message": "\u9EDE\u64CA\u5728 Google \u5730\u5716\u4E2D\u67E5\u770B\u5730\u5716"
+   },
+   "DefaultTemplateLite": {
+      "message": "{ExifViewer.CameraModel} | {FocalLength}mm F{FNumber} {ExposureTime} ISO{ISOSpeedRatings} | {DateTimeOriginal} | {Software}"
+   },
+   "ExifNotFound": {
+      "message": "\u6C92\u6709 EXIF \u4FE1\u606F"
+   },
+   "ExtDescription": {
+      "message": "\u5FEB\u901F\u67E5\u770B\u5716\u7247\u7684 EXIF \u4FE1\u606F"
+   },
+   "GotoOptionsPage": {
+      "message": "(\u9078\u9805\u9801\u9762)"
+   },
+   "ImageLoadFailure": {
+      "message": "\u5716\u7247\u4E0B\u8F09\u5931\u6557"
+   },
+   "LoadingExif": {
+      "message": "\u6B63\u5728\u8B80\u53D6 EXIF"
+   },
+   "LoadingImage": {
+      "message": "\u7B49\u5F85\u5716\u7247\u4E0B\u8F09\u5B8C\u7562"
+   },
+   "OptionsPage": {
+      "message": "options-zh_TW.html"
+   },
+   "ValueNotFound": {
+      "message": "N/A"
+   },
+   "WorkingNotify": {
+      "message": "ExifViewer \u7248\u672C $version$ \u5DE5\u4F5C\u4E2D",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   }
+}
