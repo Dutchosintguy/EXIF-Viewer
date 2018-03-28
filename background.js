@@ -14,12 +14,10 @@ function onRequest (request, sender, callback)
 	switch (request.action)
 	{
 		case "getexifcached":
-			logToGA('/exifviewer/service/getexifcached');
 			callback({ exif: ExifCache.getEntry(request.src), id:request.id });
 			log("已从缓存获取 EXIF %s", request.src);
 			break;
 		case "getexif":
-			logToGA('/exifviewer/service/getexif');
 			if (ExifCache.hasEntry(request.src))
 			{
 				log("已从缓存获取 EXIF %s", request.src);

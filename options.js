@@ -7,7 +7,6 @@ ExifViewerConfig.load(localStorage, ExifViewerManifest.getData());
 							
 			$("#general-options-form").submit(function (e)
 			{
-				logToGA('/exifviewer/options/general/save');
 				localStorage["templateLite"] = $("#template-lite").val();
 				localStorage["minImageWidth"] = $("#min-image-width").val();
 				localStorage["minImageHeight"] = $("#min-image-height").val();
@@ -25,7 +24,6 @@ ExifViewerConfig.load(localStorage, ExifViewerManifest.getData());
 			});
 		
 			$("#cache-options-form").submit( function(e) {
-				logToGA('/exifviewer/options/cache/save');
 				var cacheSize = Number($("#cache-size").val());
 				if (cacheSize == 0)
 				{
@@ -47,7 +45,6 @@ ExifViewerConfig.load(localStorage, ExifViewerManifest.getData());
 			} );
 			
 			$("#show-cache-button").click( function(e) {
-				logToGA('/exifviewer/options/cache/show');
 				
 				$("#cache-list").empty();
 				var n = ExifCache.getCacheCount();
@@ -77,7 +74,6 @@ ExifViewerConfig.load(localStorage, ExifViewerManifest.getData());
 			} );
 			
 			$("#clear-cache-button").click( function(e) {
-				logToGA('/exifviewer/options/cache/clear');
 				
 				$("#cache-list").empty();
 				ExifCache.clear();
@@ -87,7 +83,6 @@ ExifViewerConfig.load(localStorage, ExifViewerManifest.getData());
 			
 			$("#filter-options-form").submit( function (e)
 			{
-				logToGA('/exifviewer/options/filter/save');
 				showMessage("Save success");
 				localStorage["filterKeywords"] = JSON.stringify($("#filter-keywords").val().replace("\r\n", "\n").split("\n"));
 				return false;
@@ -95,7 +90,6 @@ ExifViewerConfig.load(localStorage, ExifViewerManifest.getData());
 			
 			$("#filter-options-form .reset-button").click( function (e)
 			{
-				logToGA('/exifviewer/options/filter/reset');
 				resetFilterOptions();
 				restoreOptions();
 				return false;
@@ -120,20 +114,17 @@ ExifViewerConfig.load(localStorage, ExifViewerManifest.getData());
 		
 		function resetCacheOptions ()
 		{
-			logToGA('/exifviewer/options/cache/reset');
 			delete localStorage["cacheSize"];
 			showMessage("Reset success");
 		}
 		
 		function resetFilterOptions ()
 		{
-			logToGA('/exifviewer/options/filter/reset');
 			delete localStorage["filterKeywords"];
 		}
 		
 		function resetGeneralOptions ()
 		{
-			logToGA('/exifviewer/options/general/reset');
 			delete localStorage["templateLite"];
 			delete localStorage["minImageWidth"];
 			delete localStorage["minImageHeight"];
